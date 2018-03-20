@@ -57,7 +57,6 @@ public class Questions : MonoBehaviour {
         {
             SetObjectState(true);
             DisableQuestion();
-            //catObj.gameObject.transform.position += Vector3.forward * -1.8f;
             question.GetComponent<TextMeshPro>().SetText("9 - 5 =");
             answerA.GetComponent<TextMeshPro>().SetText("4");
             answerB.GetComponent<TextMeshPro>().SetText("3");
@@ -222,7 +221,6 @@ public class Questions : MonoBehaviour {
 
     public void NextQuestion()
     {
-        //catObj.gameObject.transform.position -= Vector3.forward * -1.8f;
         SetObjectState(false);
         EnableQuestion();
     }
@@ -242,10 +240,8 @@ public class Questions : MonoBehaviour {
 
     private void SetEventTriggerState(EventTrigger eventTrigger, EventTriggerType triggerType, string methodName, UnityEventCallState triggerState)
     {
-        //for (int i = 0; i < eventTrigger.triggers.Count; i++)
         foreach (EventTrigger.Entry trigger in eventTrigger.triggers)
         {
-            //EventTrigger.Entry entry = eventTrigger.triggers[i];
             EventTrigger.Entry entry = trigger;
             EventTrigger.TriggerEvent callBack = entry.callback;
 
