@@ -5,7 +5,6 @@ using UnityEngine;
 public class ParticleSystemScript : MonoBehaviour {
 
     private ParticleSystem catPS;
-    //Color startPS = Color.black;
 
     // Use this for initialization
     void Start () {
@@ -14,9 +13,6 @@ public class ParticleSystemScript : MonoBehaviour {
         Color red = new Color32(238, 33, 63, 255);
 
         catPS = this.GetComponent<ParticleSystem>();
-
-        //ParticleSystem.MainModule start = catPS.main;
-        //start.startColor = orange;
 
         GradientColorKey[] gradientColorKey = new GradientColorKey[3];
         gradientColorKey[0].color = orange;
@@ -54,12 +50,5 @@ public class ParticleSystemScript : MonoBehaviour {
         //To call startColor, store main in a temp variable first
         ParticleSystem.MainModule assignColor = catPS.main;
         assignColor.startColor= colors;
-
-
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
